@@ -5,7 +5,7 @@ const Booking = require("./models/Booking");
 exports.resolvers = {
   Query: {
     //Getting the hotel
-    getHotel: async (parent, args) => {
+    getHotels: async () => {
       return await Hotel.find({});
     },
     getHotelByName: async (parent, args) => {
@@ -15,11 +15,11 @@ exports.resolvers = {
       return await Hotel.find({ city: args.city });
     },
     //For the user profile
-    getUser: async (parent, args) => {
+    getUsers: async (parent, args) => {
       return await User.find({});
     },
     //For the booking
-    getBooking: async (parent, args) => {
+    getBookings: async (parent, args) => {
       return await Booking.find({});
     },
   },

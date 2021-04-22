@@ -2,11 +2,11 @@ const { gql } = require('apollo-server-express');
 
 exports.typeDefs = gql `
    type Query {
-     getHotel: [Hotel]
+     getHotels: [Hotel]
      getHotelByName(hotel_name: String!): [Hotel]
      getHotelByCity(city: String!): [Hotel]
-     getUser: [User]
-     getBooking: [Booking]
+     getUsers: [User]
+     getBookings: [Booking]
    }
 
    type Mutation {
