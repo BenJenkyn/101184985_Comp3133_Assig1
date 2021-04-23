@@ -22,8 +22,8 @@ exports.resolvers = {
     getBookings: async (parent, args) => {
       return await Booking.find({});
     },
-    getLogin: async({username, password}) => {
-      return await User.findOne({username: username, password: password})
+    getLogin: async(parent, args) => {
+      return await User.findOne({username: args.username, password: args.password})
     }
   },
   Mutation: {
