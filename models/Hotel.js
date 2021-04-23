@@ -7,7 +7,7 @@ const HotelSchema = new mongoose.Schema({
     postal_code: String,
     price: Number,
     email: String,
-    user_id: Number
+    user_id: String
 });
 
 const Hotel = mongoose.model("Hotel", HotelSchema);

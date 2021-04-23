@@ -20,7 +20,7 @@ exports.resolvers = {
     },
     //For the booking
     getBookings: async (parent, args) => {
-      return await Booking.find({});
+      return await Booking.find({user_id: args.user_id});
     },
     getLogin: async(parent, args) => {
       return await User.findOne({username: args.username, password: args.password})

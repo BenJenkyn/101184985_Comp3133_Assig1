@@ -9,6 +9,6 @@ exports.typeDefs = gql`
     postal_code: String!
     price: Float!
     email: String!
-    user_id: Int!
+    user_id: String!
   }
 `;

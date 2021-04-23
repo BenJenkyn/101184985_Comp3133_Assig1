@@ -6,7 +6,7 @@ exports.typeDefs = gql `
      getHotelByName(hotel_name: String!): [Hotel]
      getHotelByCity(city: String!): [Hotel]
      getUsers: [User]
-     getBookings: [Booking]
+     getBookings(user_id: String): [Booking]
      getLogin(username: String!, password: String!): User
    }
 
