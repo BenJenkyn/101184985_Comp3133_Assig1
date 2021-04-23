@@ -2,7 +2,7 @@ const { gql } = require("apollo-server-express");
 
 exports.typeDefs = gql`
   type Hotel {
-    hotel_id: ID!
+    _id: ID!
     hotel_name: String!
     street: String!
     city: String!

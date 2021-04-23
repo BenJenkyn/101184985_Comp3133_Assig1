@@ -7,11 +7,11 @@ exports.typeDefs = gql `
      getHotelByCity(city: String!): [Hotel]
      getUsers: [User]
      getBookings: [Booking]
+     getLogin(username: String!, password:String!): User
    }
 
    type Mutation {
      addHotel(
-        hotel_id: ID!
         hotel_name: String!
         street: String!
         city: String!
@@ -21,11 +21,11 @@ exports.typeDefs = gql `
         user_id: Int!): Hotel
 
      addUser(
-      user_id: ID!
       username: String!
       password: String!
       email: String!
      ): User
+     
 
      addBooking(
         hotel_id: Int!

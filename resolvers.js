@@ -22,12 +22,14 @@ exports.resolvers = {
     getBookings: async (parent, args) => {
       return await Booking.find({});
     },
+    getLogin: async({username, password}) => {
+      return await User.findOne({username: username, password: password})
+    }
   },
   Mutation: {
     //For the hotel
     addHotel: async (parent, args) => {
       let newHotel = new Hotel({
-        hotel_id: args.hotel_id,
         hotel_name: args.hotel_name,
         street: args.street,
         city: args.city,
@@ -41,7 +43,6 @@ exports.resolvers = {
     //For the User
     addUser: async (parent, args) => {
       let newUser = new User({
-        user_id: args.user_id,
         username: args.username,
         password: args.password,
         email: args.email,
