@@ -14,6 +14,9 @@ exports.resolvers = {
     getHotelByCity: async (parent, args) => {
       return await Hotel.find({ city: args.city });
     },
+    getHotelNameById: async (parent, args) =>{
+      return await Hotel.findById({_id: args.hotel_id})
+    },
     //For the user profile
     getUsers: async (parent, args) => {
       return await User.find({});
