@@ -22,13 +22,13 @@ exports.typeDefs = gql`
       postal_code: String!
       price: Float!
       email: String!
-      user_id: Int!
+      user_id: String!
     ): Hotel
 
     addUser(username: String!, password: String!, email: String!): User
 
     addBooking(
-      hotel_id: Int!
+      hotel_id: String!
       booking_date: String!
       booking_start: String!
       booking_end: String!
